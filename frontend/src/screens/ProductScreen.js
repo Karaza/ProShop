@@ -13,6 +13,7 @@ import {
 import Rating from '../components/Rating';
 import Message from '../components/Message';
 import Loader from '../components/Loader';
+import Metas from '../components/Metas';
 import {
   listProductDetails,
   createProductReview,
@@ -73,6 +74,8 @@ const ProductScreen = ({ history, match }) => {
         <Message variant="danger">{error}</Message>
       ) : (
         <>
+          <Metas title={product.name} />
+
           <Row>
             <Col lg={6}>
               <Image src={product.image} alt={product.name} fluid />
